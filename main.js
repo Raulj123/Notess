@@ -1,20 +1,17 @@
 const notesContainer = document.getElementById("app");
 const addNoteButt = notesContainer.querySelector(".add-note");
-addNoteButt.style.position = "fixed";
-	addNoteButt.style.right = "90px";
-	addNoteButt.style.width = "200px";
-	const containerHeight = notesContainer.getBoundingClientRect().height;
-  addNoteButt.style.bottom = `${containerHeight + 20}px`;
 input = document.getElementById("search_input");
-input.addEventListener("input", () => searchFor(input));
 
-<<<<<<< HEAD
-=======
+
+input.addEventListener("input", () => searchFor(input));
+addNoteButt.addEventListener("click", () => addNote());
+
 
 function searchFor(input) {
 
 	const notes = getNotes();
-	const searchQuery = input.value.trim().toLowerCase();
+	const searchQuery = input.value.toLowerCase();
+	//will return new array with notes that include input
 	const filteredNotes = notes.filter(note => note.content.toLowerCase().includes(searchQuery));
 
 	if (searchQuery === "") {
@@ -28,31 +25,23 @@ function searchFor(input) {
 
 function displayNotes(notes) {
 	notesContainer.innerHTML = "";
-	notesContainer.appendChild(addNoteButt);
-	const notesPerRow = Math.floor((notesContainer.offsetWidth - 40) / 220); // adjust the note width and gap as necessary
-  let currentRow = 0;
-  
-  notes.forEach((note, index) => {
-    if (index % notesPerRow === 0) {
-      currentRow++;
-    }
 	
+	notes.forEach(note => {
 		const noteElement = createNote(note.id, note.content);
-		notesContainer.appendChild(noteElement, addNoteButt);
+		notesContainer.appendChild(noteElement);
 	});
-	// Calculate the height of the last row and add it to the top offset of the button
-	const lastRowHeight = notesContainer.scrollHeight - (currentRow - 1) * 220 - 20;
-	addNoteButt.style.top = `${lastRowHeight + 40}px`;
+	//Display all searched notes then add note button 
+	notesContainer.appendChild(addNoteButt);
+
 }
 
->>>>>>> master
+
+//This loads in the notes from local
 getNotes().forEach(note => {
 	const noteElement = createNote(note.id, note.content);
 	notesContainer.insertBefore(noteElement, addNoteButt);
 
 });
-
-addNoteButt.addEventListener("click", () => addNote());
 
 
 
@@ -62,16 +51,18 @@ function getNotes() {
 
 }
 
+
 function saveNotes(notes) {
 	localStorage.setItem("notess", JSON.stringify(notes));
 }
+
 
 function createNote(id, content) {
 	const element = document.createElement("textarea");
 	element.classList.add("note-text");
 	element.value = content;
 	element.placeholder = "Empty note";
-	element.style.marginBottom = "10px"; 
+	element.style.marginBottom = "10px";
 	element.addEventListener("change", () => {
 		updateNote(id, element.value);
 	});
@@ -84,12 +75,16 @@ function createNote(id, content) {
 	});
 	return element;
 }
+
+
 function updateNote(id, newContent) {
 	const notes = getNotes();
 	const targetNote = notes.filter(note => note.id == id)[0];
 	targetNote.content = newContent;
 	saveNotes(notes);
 }
+
+
 function deleteNote(id, element) {
 	const notes = getNotes().filter(note => note.id != id);
 	saveNotes(notes);
@@ -102,18 +97,8 @@ function addNote() {
 	const noteObject = {
 		id: Math.floor(Math.random() * 100000), content: ""
 	};
-	const notesPerRow = Math.floor((notesContainer.offsetWidth - 40) / 220); // adjust the note width and gap as necessary
-	const lastRowNotes = existingNotes.slice(-notesPerRow);
+
 	const noteElement = createNote(noteObject.id, noteObject.content);
-	
-	if (lastRowNotes.length === notesPerRow) {
-		const lastNote = notesContainer.lastChild.previousSibling;
-		const lastRowHeight = lastNote.offsetTop + lastNote.offsetHeight + 20;
-		addNoteButt.style.top = `${lastRowHeight}px`;
-		notesContainer.appendChild(addNoteButt);
-	  }
-	
-	
 	notesContainer.insertBefore(noteElement, addNoteButt);
 	existingNotes.push(noteObject);
 	saveNotes(existingNotes);

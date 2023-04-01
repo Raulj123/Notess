@@ -45,8 +45,7 @@ display:grid;
 grid-template-columns: repeat(auto-fill,200px);
 padding:20px;
 gap:20px;
-max-height: calc(100vh - 150px); /* Set a maximum height for the notes container */
-  margin-bottom: 100px; /* Set a margin bottom to create space for the button */
+
 }
 .add-note{
 	height:200px;
@@ -63,11 +62,17 @@ max-height: calc(100vh - 150px); /* Set a maximum height for the notes container
 .add-note:hover{
 background: rgba(0,0,0,0.2);
 
-
-
-
 }
-
+.note-tag {
+	position: absolute; /* position the tag relative to the note */
+	top: 200px; /* adjust the top and left values as needed */
+	left: 60px;
+	background-color: #f2f2f2;
+	color: #333;
+	font-size: 12px;
+	padding: 3px 6px;
+	border-radius: 5px;
+}
 
 
 </style>
@@ -126,8 +131,9 @@ background: rgba(0,0,0,0.2);
 	
 	
 	<div id="app">	
+ 
+  <button class="add-note" type="button">+</button>
 	
-	<button class="add-note" type="button">+</button>
 	</div>	
 	
 		
