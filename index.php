@@ -94,7 +94,8 @@ background: rgba(0,0,0,0.2);
 
 	<nav class="navbar navbar-expand-lg navbar-dark  bg-dark ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">Notes</a>
+  <img class="navbar-brand" href="index.php" src="Notess.gif" alt="Notess" width="40" height="50">
+    <!-- <a class="navbar-brand" href="index.php">Notes</a> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
