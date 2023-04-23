@@ -133,7 +133,7 @@ body {
 }
 </style>
     <form class="form-signin" method = "post">
-  <img class="mb-4" src="Notess.gif" alt="Notess" width="80" height="80">
+  <img class="mb-4" src="./media/Notess.gif" alt="Notess" width="80" height="80">
   <h1 class="h3 mb-3 font-weight-normal" style="color:white;">Log in page</h1>
   <label for="inputEmail" class="sr-only">Email address</label>
   <input type="text" id="inputEmail" name="user_name" class="form-control" placeholder="user name" required autofocus>

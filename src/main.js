@@ -8,7 +8,6 @@ addNoteButt.addEventListener("click", () => addNote());
 
 
 function searchFor(input) {
-
 	const notes = getNotes();
 	const searchQuery = input.value.toLowerCase();
 	//will return new array with notes that include input
@@ -19,20 +18,17 @@ function searchFor(input) {
 	} else {
 		displayNotes(filteredNotes);
 	}
-
 }
 
 
 function displayNotes(notes) {
 	notesContainer.innerHTML = "";
-	
 	notes.forEach(note => {
 		const noteElement = createNote(note.id, note.content);
 		notesContainer.appendChild(noteElement);
 	});
 	//Display all searched notes then add note button 
 	notesContainer.appendChild(addNoteButt);
-
 }
 
 
@@ -40,15 +36,12 @@ function displayNotes(notes) {
 getNotes().forEach(note => {
 	const noteElement = createNote(note.id, note.content);
 	notesContainer.insertBefore(noteElement, addNoteButt);
-
 });
 
 
 
 function getNotes() {
-
-	return JSON.parse(localStorage.getItem("notess") || "[]");  // this function retrieves an array of "notess" from the local storage, or an empty array if none is found.
-
+  	return JSON.parse(localStorage.getItem("notess") || "[]");  // this function retrieves an array of "notess" from the local storage, or an empty array if none is found.
 }
 
 
@@ -63,12 +56,14 @@ function createNote(id, content) {
 	element.value = content;
 	element.placeholder = "Empty note";
 	element.style.marginBottom = "10px";
+
 	element.addEventListener("change", () => {
 		updateNote(id, element.value);
 	});
 
 	element.addEventListener("dblclick", () => {
 		const doDelete = confirm("Are you sure you want to delete?");
+
 		if (doDelete) {
 			deleteNote(id, element);
 		}
@@ -103,9 +98,6 @@ function addNote() {
 	existingNotes.push(noteObject);
 	saveNotes(existingNotes);
 }
-
-
-
 
 
 
