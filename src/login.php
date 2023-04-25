@@ -34,10 +34,10 @@ if($_SERVER['REQUEST_METHOD']== "POST")
        	 	}
         }
         
-        echo "Wrong username or password";
+        echo  "<p>Wrong username or password</p>";
     }else
     {
-        echo "Please enter valid info";
+        echo  "<p>Please enter valid info</p>";
     }
 
 
@@ -130,6 +130,9 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+p{
+  color: white;
 }
 </style>
     <form class="form-signin" method = "post">
