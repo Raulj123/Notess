@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD']== "POST")
     if (mysqli_num_rows($result) > 0) {
       echo "<p>Username already exists. Please choose a different username.</p>";
       
-    }else if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+    }else if(!empty($user_name) && !empty($password) && !is_numeric($user_name) && !is_numeric($password))
     {
     	
         //save to database
@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD']== "POST")
     }else
     {
         //p tag so you can see the white font 
-        echo "<p>Please enter valid info</p>";
+        echo "<p>Please enter valid info. Password can not be filled with numeric values</p>";
     }
 
 
