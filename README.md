@@ -3,5 +3,5 @@ want</h1>
 <h3>Demo-Run of program</h3>
 
 <h2>To get program to run:</h2>
-[Link to instructions.txt](./to_run/instructions.txt)
+<a href = "https://github.com/Raulj123/Notess/blob/main/to_run/instructions.txt" alt="instructions.txt">  instructions.txt </a>
 
