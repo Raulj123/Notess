@@ -1,0 +1,48 @@
+Prerequisites:
+	To install XAMPP:  https://www.apachefriends.org	*Make sure to click your correct OS system!
+	once downloaded 
+	chmod 755 xampp-linux-*-installer.run
+	sudo ./xampp-linux-*-installer.run
+
+
+To start server: 
+	sudo /opt/lampp/lampp start
+
+
+Instructions to get program running in your linux os: 
+	1) Install XAMPP first and get server running to check if it is go to your browser and type http://localhost/
+	2) git clone the repo https://github.com/Raulj123/Notess
+	3) Move Notess dir into htdocs:
+		sudo nautilus
+			-> other locations
+	   			-> computer 
+	      				-> opt
+	        				-> lampp 
+	          					-> htdocs 	move your Notess dir in here 
+	4) Navagate to localhost/phpmyadmin  
+		-> On the left hand col you will see database tables click on the test database
+			-> On the navbar you will see 'Structure' 'SQL' 'Search' 'Query Export' ...etc      Click on Import 
+	5) Here click on browse and select the file Login_db.sql  scroll down and click Import 
+		-> You should see green checkmarks!  IF you dont make sure you clicked on the test database! and start on step 4 again 
+	6) Make sure the database was loaded in click on test database on the left col and you should see a table called users with some info already in it 
+	7)Click on test database again 
+		-> On the navbar click on Operations
+			-> You should see a section called 'Rename database to"
+				-> In there paste Login_db 
+					-> Make sure the spelling is correct! 
+						-> click on the button 'go' which is located on the bottom right hand side on that section 
+		
+	4) You're Done! : go to your browser and type http://localhost/   ->   Notess   ->   src
+
+
+IMPORTANT:  To make changes run command below & replace username with yours. This should give you permission to push 
+		sudo chown -R <username>:<username> /opt/lampp/htdocs/Notess
+
+Backend:
+	localhost/phpmyadmin       on browser 
+
+To find XAMPP:  sudo find / -name xampp
+
+
+Please feel free to reach out and if you know any shortcuts! 
+Need extra help? Reach out to me on discord @Raul Jarquin (250b)#5611

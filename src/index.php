@@ -73,7 +73,11 @@ background: rgba(0,0,0,0.2);
 	padding: 3px 6px;
 	border-radius: 5px;
 }
-
+.btn{
+  height:2rem;
+  margin-left:9px;
+  padding:5px;
+}
 
 </style>
 
@@ -123,8 +127,7 @@ background: rgba(0,0,0,0.2);
       <form class="d-flex"  method ="get" >
         <input  class="form-control me-2" id="search_input" type="text" placeholder="Search" aria-label="Search" >
         <button type="button" id="tag1" class="btn btn-outline-success">Math</button>
-        <button type="button" id="tag2" class="btn btn-outline-success">Computer Science</button>
-        <button class="btn btn-outline-success"  type="submit">Search</button>
+        <button type="button" id="tag2" class="btn btn-outline-success" style="white-space: nowrap;" >Computer Science</button>
       </form>
     </div>
   </div>

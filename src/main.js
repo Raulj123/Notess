@@ -11,12 +11,32 @@ $(document).ready(function() {
     $("#tag1").click(function() {
         var tag = "math"; 
         $("#search_input").val(tag); 
+		const notes = getNotes();
+		const searchQuery = input.value.toLowerCase();
+		//will return new array with notes that include input
+		const filteredNotes = notes.filter(note => note.content.toLowerCase().includes(searchQuery));
+
+		if (searchQuery === "") {
+			displayNotes(notes);
+		}else {
+			displayNotes(filteredNotes);
+		}
     });
 
     // Function to handle when the second button is clicked
     $("#tag2").click(function() {
         var tag = "computer science"; 
-        $("#search_input").val(tag); 
+        $("#search_input").val(tag);
+		const notes = getNotes();
+		const searchQuery = input.value.toLowerCase();
+		//will return new array with notes that include input
+		const filteredNotes = notes.filter(note => note.content.toLowerCase().includes(searchQuery));
+
+		if (searchQuery === "") {
+			displayNotes(notes);
+		}else {
+			displayNotes(filteredNotes);
+		} 
     });
 
 	$("#buttonContainer").append($("#tag1"));
