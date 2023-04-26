@@ -10,13 +10,13 @@ $(document).ready(function() {
     // Function to handle when the first button is clicked
     $("#tag1").click(function() {
         var tag = "apple"; 
-        $("#searchBar").val(tag); 
+        $("#search_input").val(tag); 
     });
 
     // Function to handle when the second button is clicked
     $("#tag2").click(function() {
         var tag = "banana"; 
-        $("#searchBar").val(tag); 
+        $("#search_input").val(tag); 
     });
 
 	$("#buttonContainer").append($("#tag1"));
