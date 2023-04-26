@@ -3,7 +3,8 @@ Prerequisites:
 	once downloaded 
 	chmod 755 xampp-linux-*-installer.run
 	sudo ./xampp-linux-*-installer.run
-
+	
+	For later use: In the to_run dir there will be a file called Login_db.sql you will need this for later 
 
 To start server: 
 	sudo /opt/lampp/lampp start
@@ -12,14 +13,14 @@ To start server:
 Instructions to get program running in your linux os: 
 	1) Install XAMPP first and get server running to check if it is go to your browser and type http://localhost/
 	2) git clone the repo https://github.com/Raulj123/Notess
-	3) Move Notess dir into htdocs:
+	3) Move Notess dir into htdocs: Run the command below! 
 		sudo nautilus
 			-> other locations
 	   			-> computer 
 	      				-> opt
 	        				-> lampp 
 	          					-> htdocs 	move your Notess dir in here 
-	4) Navagate to localhost/phpmyadmin  
+	4) Navagate to: go to your browser and type ->  localhost/phpmyadmin  
 		-> On the left hand col you will see database tables click on the test database
 			-> On the navbar you will see 'Structure' 'SQL' 'Search' 'Query Export' ...etc      Click on Import 
 	5) Here click on browse and select the file Login_db.sql  scroll down and click Import 
