@@ -121,6 +121,8 @@ background: rgba(0,0,0,0.2);
       </ul>
       <form class="d-flex" >
         <input  class="form-control me-2" id="search_input" type="text" placeholder="Search" aria-label="Search" >
+        <button type = "button" id = "tag1"> Apple </button> 
+        <button type = "button" id = "tag2"> Banana </button>
         <button class="btn btn-outline-success"  type="submit">Search</button>
       </form>
     </div>
