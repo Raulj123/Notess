@@ -119,10 +119,11 @@ background: rgba(0,0,0,0.2);
           </ul>
        
       </ul>
-      <form class="d-flex" >
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <form class="d-flex"  method ="get" >
         <input  class="form-control me-2" id="search_input" type="text" placeholder="Search" aria-label="Search" >
-        <button type = "button" id = "tag1"> Apple </button> 
-        <button type = "button" id = "tag2"> Banana </button>
+        <button type="button" id="tag1" class="btn btn-outline-success">Math</button>
+        <button type="button" id="tag2" class="btn btn-outline-success">Computer Science</button>
         <button class="btn btn-outline-success"  type="submit">Search</button>
       </form>
     </div>

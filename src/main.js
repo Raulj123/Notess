@@ -9,13 +9,13 @@ addNoteButt.addEventListener("click", () => addNote());
 $(document).ready(function() {
     // Function to handle when the first button is clicked
     $("#tag1").click(function() {
-        var tag = "apple"; 
+        var tag = "math"; 
         $("#search_input").val(tag); 
     });
 
     // Function to handle when the second button is clicked
     $("#tag2").click(function() {
-        var tag = "banana"; 
+        var tag = "computer science"; 
         $("#search_input").val(tag); 
     });
 
