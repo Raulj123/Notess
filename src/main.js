@@ -6,6 +6,22 @@ input = document.getElementById("search_input");
 input.addEventListener("input", () => searchFor(input));
 addNoteButt.addEventListener("click", () => addNote());
 
+$(document).ready(function() {
+    // Function to handle when the first button is clicked
+    $("#tag1").click(function() {
+        var tag = "apple"; 
+        $("#searchBar").val(tag); 
+    });
+
+    // Function to handle when the second button is clicked
+    $("#tag2").click(function() {
+        var tag = "banana"; 
+        $("#searchBar").val(tag); 
+    });
+
+	$("#buttonContainer").append($("#tag1"));
+	$("#buttonContainer").append($("#tag2"));
+});
 
 function searchFor(input) {
 	const notes = getNotes();
