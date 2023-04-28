@@ -117,7 +117,7 @@ background: rgba(0,0,0,0.2);
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Leave review</a></li>
-            <li><a class="dropdown-item" href="https://github.com/Raulj123/NotesApp">Github repo</a></li>
+            <li><a class="dropdown-item" href="https://github.com/Raulj123/Notess">Github repo</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">idk what to add here</a></li>
           </ul>
